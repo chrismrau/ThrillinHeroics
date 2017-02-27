@@ -1,0 +1,415 @@
+﻿package Map  {
+	import flash.utils.Dictionary;
+	
+	public class SectorNames
+	{
+		public static const BLUE_SUN_C01:String = "BlueSun_c01";
+		public static const BLUE_SUN_C02:String = "BlueSun_c02";
+		public static const BLUE_SUN_DRAGONS_EGG:String = "BlueSun_DragonsEgg";
+		public static const BLUE_SUN_DEADWOOD:String = "BlueSun_Deadwood";
+		public static const BLUE_SUN_FURY:String = "BlueSun_Fury";
+		public static const BLUE_SUN_HIGHGATE:String = "BlueSun_Highgate";
+		public static const BLUE_SUN_MERIDIAN:String = "BlueSun_Meridian";
+		public static const BLUE_SUN_MUIR:String = "BlueSun_Muir";
+		public static const BLUE_SUN_NEW_CANAAN:String = "BlueSun_NewCanaan";
+		
+		public static const BORDER_SPACE_A01:String = "BorderSpace_a01";
+		public static const BORDER_SPACE_A02:String = "BorderSpace_a02";
+		public static const BORDER_SPACE_A03:String = "BorderSpace_a03";
+		public static const BORDER_SPACE_A04:String = "BorderSpace_a04";
+		public static const BORDER_SPACE_A05:String = "BorderSpace_a05";
+		public static const BORDER_SPACE_A06:String = "BorderSpace_a06";		
+		public static const BORDER_SPACE_A07:String = "BorderSpace_a07";
+		public static const BORDER_SPACE_A08:String = "BorderSpace_a08";
+		public static const BORDER_SPACE_A09:String = "BorderSpace_a09";
+		public static const BORDER_SPACE_A13:String = "BorderSpace_a13";
+		public static const BORDER_SPACE_A14:String = "BorderSpace_a14";
+		public static const BORDER_SPACE_A15:String = "BorderSpace_a15";
+		public static const BORDER_SPACE_A16:String = "BorderSpace_a16";
+		public static const BORDER_SPACE_A17:String = "BorderSpace_a17";
+		public static const BORDER_SPACE_A18:String = "BorderSpace_a18";
+		public static const BORDER_SPACE_A19:String = "BorderSpace_a19";
+		public static const BORDER_SPACE_A20:String = "BorderSpace_a20";
+		public static const BORDER_SPACE_A21:String = "BorderSpace_a21";
+		public static const BORDER_SPACE_A22:String = "BorderSpace_a22";
+		public static const BORDER_SPACE_A23:String = "BorderSpace_a23";
+		public static const BORDER_SPACE_A24:String = "BorderSpace_a24";
+		public static const BORDER_SPACE_A28:String = "BorderSpace_a28";
+		public static const BORDER_SPACE_A29:String = "BorderSpace_a29";
+		public static const BORDER_SPACE_B05:String = "BorderSpace_b05";
+		public static const BORDER_SPACE_B06:String = "BorderSpace_b06";
+		public static const BORDER_SPACE_B07:String = "BorderSpace_b07";
+		public static const BORDER_SPACE_B08:String = "BorderSpace_b08";
+		public static const BORDER_SPACE_B09:String = "BorderSpace_b09";
+		public static const BORDER_SPACE_B11:String = "BorderSpace_b11";
+		public static const BORDER_SPACE_B20:String = "BorderSpace_b20";
+		public static const BORDER_SPACE_B21:String = "BorderSpace_b21";
+		public static const BORDER_SPACE_B22:String = "BorderSpace_b22";
+		public static const BORDER_SPACE_B23:String = "BorderSpace_b23";
+		public static const BORDER_SPACE_B24:String = "BorderSpace_b24";
+		public static const BORDER_SPACE_B25:String = "BorderSpace_b25";
+		
+		public static const BURNHAM_B01:String = "Burnham_b01";
+		public static const BURNHAM_B02:String = "Burnham_b02";
+		public static const BURNHAM_B03:String = "Burnham_b03";
+		public static const BURNHAM_MIRANDA:String = "Burnham_Miranda";
+		
+		private static const RIM_A21:String = "RimSpace_a21";
+		private static const RIM_A22:String = "RimSpace_a22";
+		private static const RIM_A23:String = "RimSpace_a23";
+		private static const RIM_A24:String = "RimSpace_a24";
+		private static const RIM_A26:String = "RimSpace_a26";
+		private static const RIM_A27:String = "RimSpace_a27";
+		private static const RIM_A28:String = "RimSpace_a28";
+		private static const RIM_B24:String = "RimSpace_b24";
+		private static const RIM_B25:String = "RimSpace_b25";
+		private static const RIM_CORETEX_RELAY_7:String = "RimSpace_CortexRelay7";
+		
+		private static const LUX_PELORUM:String = "Lux_Pelorum";
+		private static const LUX_PERSEPHONE:String = "Lux_Persephone";
+		
+		private static const GEORGIA_ATHENS:String = "Georgia_Athens";
+		private static const GEORGIA_B02:String = "Georgia_b02";
+		private static const GEORGIA_BOROS:String = "Georgia_Boros";
+		private static const GEORGIA_C01:String = "Georgia_c01";
+		private static const GEORGIA_C04:String = "Georgia_c04";
+		private static const GEORGIA_C05:String = "Georgia_c05";
+		private static const GEORGIA_C06:String = "Georgia_c06";
+		private static const GEORGIA_EZRA:String = "Georgia_Ezra";
+		private static const GEORGIA_KERRY:String = "Georgia_Kerry";
+		private static const GEORGIA_NEWHOPE:String = "Georgia_Newhope";
+		private static const GEORGIA_PRIAM_ITHACA:String = "Georgia_Priam_Ithaca";
+		private static const GEORGIA_REGINA:String = "Georgia_Regina";
+		private static const GEORGIA_THREE_HILLS:String = "Georgia_ThreeHills";
+		
+		private static const HEINLEIN_SILVERHOLD:String = "Heinlein_Silverhold";
+		private static const HEINLEIN_TRIUMPH:String = "Heinlein_Triumph";
+		
+		public static const HIMINBJORG_AESIR:String = "Himinbjorg_Aesir";
+		public static const HIMINBJORG_BRISINGAMEN:String = "Himinbjorg_Brisingamen";
+		
+		public static const MURPHY_APHRODITE:String = "Murphy_Aphrodite";
+		public static const MURPHY_HERA:String = "Murphy_Hera";
+		public static const MURPHY_SHADOW:String = "Murphy_Shadow";
+		
+		public static const QIN_SHI_HUANG_SANTO:String = "QinShiHuang_Santo";
+
+		public static const RED_SUN_ANSONSWORLD:String = "RedSun_AnsonsWorld";		
+		public static const RED_SUN_B01:String = "RedSun_b01";		
+		public static const RED_SUN_HARVEST:String = "RedSun_Harvest";		
+		public static const RED_SUN_C01:String = "RedSun_c01";		
+		public static const RED_SUN_JUBILEE:String = "RedSun_Jubilee";		
+		public static const RED_SUN_C03:String = "RedSun_c03";		
+		public static const RED_SUN_C05:String = "RedSun_c05";		
+		public static const RED_SUN_C06:String = "RedSun_c06";		
+		public static const RED_SUN_C07:String = "RedSun_c07";		
+		public static const RED_SUN_GREENLEAF:String = "RedSun_Greenleaf";	
+		public static const RED_SUN_JIANGYIN:String = "RedSun_Jiangyin";
+		public static const RED_SUN_NEW_MELBOURNE:String = "RedSun_NewMelbourne";	
+		public static const RED_SUN_SPACE_BAZAAR:String = "RedSun_SpaceBazaar";		
+		public static const RED_SUN_STALBANS:String = "RedSun_StAlbans";	
+		
+		public static const LONDINIUM:String = "WhiteSun_Londinium";
+		public static const WHITE_SUN_ALBION:String = "WhiteSun_Albion";
+		public static const WHITE_SUN_ARIEL:String = "WhiteSun_Ariel";
+		public static const WHITE_SUN_B01:String = "WhiteSun_b01";
+		public static const WHITE_SUN_B04:String = "WhiteSun_b04";
+		public static const WHITE_SUN_BELLEROPHON:String = "WhiteSun_Bellerophon";
+		public static const WHITE_SUN_BERNADETTE:String = "WhiteSun_Bernadette";
+		public static const WHITE_SUN_C02:String = "WhiteSun_c02";
+		public static const WHITE_SUN_C04:String = "WhiteSun_c04";
+		public static const WHITE_SUN_C05:String = "WhiteSun_c05";
+		public static const WHITE_SUN_C06:String = "WhiteSun_c06";
+		public static const WHITE_SUN_C08:String = "WhiteSun_c08";
+		public static const WHITE_SUN_D01:String = "WhiteSun_d01";
+		public static const WHITE_SUN_D02:String = "WhiteSun_d02";
+		public static const WHITE_SUN_D04:String = "WhiteSun_d04";
+		public static const WHITE_SUN_D05:String = "WhiteSun_d05";
+		public static const WHITE_SUN_D06:String = "WhiteSun_d06";
+		public static const WHITE_SUN_D07:String = "WhiteSun_d07";
+		public static const WHITE_SUN_D08:String = "WhiteSun_d08";
+		public static const WHITE_SUN_D10:String = "WhiteSun_d10";
+		public static const WHITE_SUN_D11:String = "WhiteSun_d11";
+		public static const WHITE_SUN_D13:String = "WhiteSun_d13";
+		public static const WHITE_SUN_D14:String = "WhiteSun_d14";
+		public static const WHITE_SUN_D15:String = "WhiteSun_d15";
+		public static const WHITE_SUN_GONGHE:String = "WhiteSun_Gonghe";
+		public static const WHITE_SUN_LIANNJIUN:String = "WhiteSun_LiannJiun";
+		public static const WHITE_SUN_OSIRIS:String = "WhiteSun_Osiris";
+		public static const WHITE_SUN_SIHNON:String = "WhiteSun_Sihnon";
+		public static const WHITE_SUN_VALENTINE:String = "WhiteSun_Valentine";
+		
+		private static var _sectors:Dictionary = null;
+		private static function InitializeSectors():void
+		{
+			_sectors = new Dictionary();
+			_sectors[BURNHAM_MIRANDA] = [BURNHAM_B01, BURNHAM_B02, BURNHAM_B03];
+			_sectors[BURNHAM_B01] = [BURNHAM_MIRANDA, BURNHAM_B02, RIM_A28, RIM_A27];
+			_sectors[BURNHAM_B02] = [BURNHAM_MIRANDA, BURNHAM_B01, RIM_A27, RIM_A26, RIM_CORETEX_RELAY_7, RIM_B25];
+			_sectors[BURNHAM_B03] = [BURNHAM_MIRANDA, BURNHAM_B02, RIM_CORETEX_RELAY_7, RIM_B24];
+			
+			_sectors[BLUE_SUN_C01] = [RIM_B24, BLUE_SUN_DRAGONS_EGG, BLUE_SUN_HIGHGATE];
+			_sectors[BLUE_SUN_DRAGONS_EGG] = [RIM_B24, RIM_A24, RIM_A23, BLUE_SUN_C02, BLUE_SUN_FURY, BLUE_SUN_HIGHGATE, BLUE_SUN_C01];
+			_sectors[BLUE_SUN_C02] = [BLUE_SUN_DRAGONS_EGG, RIM_A23, RIM_A22, RIM_A21, BLUE_SUN_DEADWOOD, BLUE_SUN_FURY];
+			_sectors[BLUE_SUN_DEADWOOD] = [BLUE_SUN_C02, RIM_A21, BLUE_SUN_MUIR, BLUE_SUN_FURY];
+			_sectors[BLUE_SUN_FURY] = [BLUE_SUN_HIGHGATE, BLUE_SUN_DRAGONS_EGG, BLUE_SUN_C02, BLUE_SUN_DEADWOOD, BLUE_SUN_MUIR, BLUE_SUN_NEW_CANAAN, BLUE_SUN_MERIDIAN];
+			_sectors[BLUE_SUN_HIGHGATE] = [BLUE_SUN_C01, BLUE_SUN_DRAGONS_EGG, BLUE_SUN_FURY, BLUE_SUN_MERIDIAN];
+			_sectors[BLUE_SUN_MERIDIAN] = [BLUE_SUN_HIGHGATE, BLUE_SUN_FURY, BLUE_SUN_NEW_CANAAN];
+			_sectors[BLUE_SUN_MUIR] = [BLUE_SUN_NEW_CANAAN, BLUE_SUN_FURY, BLUE_SUN_DEADWOOD];
+			_sectors[BLUE_SUN_NEW_CANAAN] = [BLUE_SUN_MERIDIAN, BLUE_SUN_FURY, BLUE_SUN_MUIR];
+			
+			_sectors[BORDER_SPACE_A01] = [BORDER_SPACE_A29, BORDER_SPACE_A02, WHITE_SUN_D01];
+			_sectors[BORDER_SPACE_A02] = [BORDER_SPACE_A01, BORDER_SPACE_A03, WHITE_SUN_D01, WHITE_SUN_D02];
+			_sectors[BORDER_SPACE_A03] = [BORDER_SPACE_A02, BORDER_SPACE_A04, WHITE_SUN_D02];
+			_sectors[BORDER_SPACE_A04] = [BORDER_SPACE_A03, BORDER_SPACE_A05, WHITE_SUN_D02, LUX_PERSEPHONE];
+			_sectors[BORDER_SPACE_A05] = [BORDER_SPACE_A04, BORDER_SPACE_A06, BORDER_SPACE_B05, LUX_PERSEPHONE];
+			_sectors[BORDER_SPACE_A06] = [BORDER_SPACE_A05, BORDER_SPACE_A07, BORDER_SPACE_B06, WHITE_SUN_D04, LUX_PERSEPHONE];
+			_sectors[BORDER_SPACE_A07] = [BORDER_SPACE_A06, BORDER_SPACE_A08, BORDER_SPACE_B07, WHITE_SUN_D04, HIMINBJORG_AESIR];
+			_sectors[BORDER_SPACE_A08] = [BORDER_SPACE_A07, BORDER_SPACE_A09, WHITE_SUN_D05, WHITE_SUN_D04, HIMINBJORG_AESIR];
+			_sectors[BORDER_SPACE_A09] = [BORDER_SPACE_A08, WHITE_SUN_D05, WHITE_SUN_D04, HIMINBJORG_AESIR, RED_SUN_C01, RED_SUN_SPACE_BAZAAR];
+			_sectors[BORDER_SPACE_A13] = [WHITE_SUN_D07, WHITE_SUN_D08, RED_SUN_C07, RED_SUN_C06, HEINLEIN_TRIUMPH, HEINLEIN_SILVERHOLD, BORDER_SPACE_A14];
+			_sectors[BORDER_SPACE_A14] = [WHITE_SUN_D08, HEINLEIN_SILVERHOLD, BORDER_SPACE_A13, BORDER_SPACE_A15];
+			_sectors[BORDER_SPACE_A15] = [WHITE_SUN_D08, BORDER_SPACE_A14, BORDER_SPACE_A16, WHITE_SUN_VALENTINE];
+			_sectors[BORDER_SPACE_A16] = [BORDER_SPACE_A15, BORDER_SPACE_A17, WHITE_SUN_VALENTINE];
+			_sectors[BORDER_SPACE_A17] = [BORDER_SPACE_A16, BORDER_SPACE_A18, WHITE_SUN_D10, WHITE_SUN_VALENTINE];
+			_sectors[BORDER_SPACE_A18] = [BORDER_SPACE_A17, BORDER_SPACE_A19, WHITE_SUN_D10];
+			_sectors[BORDER_SPACE_A19] = [BORDER_SPACE_A18, BORDER_SPACE_A20, WHITE_SUN_D10, WHITE_SUN_D11];
+			_sectors[BORDER_SPACE_A20] = [BORDER_SPACE_A19, BORDER_SPACE_A21, BORDER_SPACE_B20, WHITE_SUN_D11];
+			_sectors[BORDER_SPACE_A21] = [BORDER_SPACE_A20, BORDER_SPACE_A22, BORDER_SPACE_B21, WHITE_SUN_D11, WHITE_SUN_ALBION];
+			_sectors[BORDER_SPACE_A22] = [BORDER_SPACE_A21, BORDER_SPACE_A23, BORDER_SPACE_B22, WHITE_SUN_ALBION];
+			_sectors[BORDER_SPACE_A23] = [BORDER_SPACE_A22, BORDER_SPACE_A24, BORDER_SPACE_B23, WHITE_SUN_ALBION, WHITE_SUN_D13, MURPHY_HERA];
+			_sectors[BORDER_SPACE_A24] = [BORDER_SPACE_A23, GEORGIA_C04, GEORGIA_C05, WHITE_SUN_D14, WHITE_SUN_D13, MURPHY_HERA, MURPHY_APHRODITE];
+			_sectors[BORDER_SPACE_A28] = [BORDER_SPACE_A29, GEORGIA_NEWHOPE, GEORGIA_C01, WHITE_SUN_D15, WHITE_SUN_ARIEL];
+			_sectors[BORDER_SPACE_A29] = [BORDER_SPACE_A28, BORDER_SPACE_A01, WHITE_SUN_D01, WHITE_SUN_ARIEL];
+			_sectors[BORDER_SPACE_B05] = [BORDER_SPACE_A05, BORDER_SPACE_B06];
+			_sectors[BORDER_SPACE_B06] = [BORDER_SPACE_A06, BORDER_SPACE_B05, BORDER_SPACE_B07];
+			_sectors[BORDER_SPACE_B07] = [BORDER_SPACE_A07, BORDER_SPACE_B06, BORDER_SPACE_B08, HIMINBJORG_AESIR];
+			_sectors[BORDER_SPACE_B08] = [BORDER_SPACE_B07, BORDER_SPACE_B09, HIMINBJORG_BRISINGAMEN];
+			_sectors[BORDER_SPACE_B09] = [BORDER_SPACE_B08, HIMINBJORG_BRISINGAMEN, RED_SUN_C01, RED_SUN_JUBILEE];
+			_sectors[BORDER_SPACE_B11] = [RED_SUN_ANSONSWORLD];
+			_sectors[BORDER_SPACE_B20] = [BORDER_SPACE_B21, BORDER_SPACE_A20];
+			_sectors[BORDER_SPACE_B21] = [BORDER_SPACE_B20, BORDER_SPACE_B22, BORDER_SPACE_A21, RIM_A21];
+			_sectors[BORDER_SPACE_B22] = [BORDER_SPACE_B21, BORDER_SPACE_B23, BORDER_SPACE_A22, RIM_A21, RIM_A22];
+			_sectors[BORDER_SPACE_B23] = [BORDER_SPACE_B22, BORDER_SPACE_B24, BORDER_SPACE_A23, RIM_A22, RIM_A23, MURPHY_SHADOW, MURPHY_HERA];
+			_sectors[BORDER_SPACE_B24] = [BORDER_SPACE_B23, BORDER_SPACE_B25, RIM_A23, RIM_A24, RIM_CORETEX_RELAY_7, MURPHY_SHADOW];
+			_sectors[BORDER_SPACE_B25] = [BORDER_SPACE_B24, RIM_A23, RIM_A24, RIM_CORETEX_RELAY_7, RIM_A26, RIM_A27, GEORGIA_C06, GEORGIA_C05, MURPHY_APHRODITE, MURPHY_SHADOW];
+			
+			_sectors[RIM_A21] = [RIM_A22, BORDER_SPACE_B22, BORDER_SPACE_B21, BLUE_SUN_DEADWOOD, BLUE_SUN_C02];
+			_sectors[RIM_A22] = [RIM_A21, RIM_A23, BORDER_SPACE_B22, BORDER_SPACE_B23, BLUE_SUN_C02];
+			_sectors[RIM_A23] = [RIM_A24, RIM_A22, BORDER_SPACE_B23, BORDER_SPACE_B24, BLUE_SUN_C02, BLUE_SUN_DRAGONS_EGG];
+			_sectors[RIM_A24] = [RIM_A23, RIM_CORETEX_RELAY_7, RIM_B24, BORDER_SPACE_B24, BLUE_SUN_DRAGONS_EGG];
+			_sectors[RIM_CORETEX_RELAY_7] = [RIM_A24, RIM_A26, RIM_B25, BORDER_SPACE_B24, BORDER_SPACE_B25, BURNHAM_B02];
+			_sectors[RIM_A26] = [RIM_CORETEX_RELAY_7, RIM_A27, BORDER_SPACE_B25, BURNHAM_B02];
+			_sectors[RIM_A27] = [RIM_A26, RIM_A28, BORDER_SPACE_B25, BURNHAM_B02, BURNHAM_B01, GEORGIA_C06, GEORGIA_THREE_HILLS];
+			_sectors[RIM_A28] = [RIM_A27, BURNHAM_B01, GEORGIA_THREE_HILLS];
+			_sectors[RIM_B24] = [BLUE_SUN_C01, RIM_A24, RIM_B25];
+			_sectors[RIM_B25] = [RIM_CORETEX_RELAY_7, RIM_B24, BURNHAM_B02, BURNHAM_B03];
+
+			_sectors[LUX_PELORUM] = [WHITE_SUN_D02, WHITE_SUN_C02, LUX_PERSEPHONE, WHITE_SUN_D04, WHITE_SUN_GONGHE, WHITE_SUN_SIHNON, WHITE_SUN_B01, WHITE_SUN_BELLEROPHON];
+			_sectors[LUX_PERSEPHONE] = [BORDER_SPACE_A04, BORDER_SPACE_A05, BORDER_SPACE_A06, WHITE_SUN_D04, LUX_PELORUM, WHITE_SUN_D02];
+		
+			_sectors[GEORGIA_ATHENS] = [GEORGIA_NEWHOPE, WHITE_SUN_D15, WHITE_SUN_D14, GEORGIA_C04, GEORGIA_B02];
+			_sectors[GEORGIA_B02] = [GEORGIA_NEWHOPE, GEORGIA_ATHENS, GEORGIA_C04, GEORGIA_BOROS, GEORGIA_EZRA, GEORGIA_PRIAM_ITHACA];
+			_sectors[GEORGIA_BOROS] = [GEORGIA_KERRY, GEORGIA_REGINA, GEORGIA_EZRA, GEORGIA_B02, GEORGIA_C04, GEORGIA_C05, GEORGIA_C06];
+			_sectors[GEORGIA_C01] = [BORDER_SPACE_A28, GEORGIA_NEWHOPE, GEORGIA_PRIAM_ITHACA];
+			_sectors[GEORGIA_C04] = [GEORGIA_BOROS, GEORGIA_B02, GEORGIA_ATHENS, WHITE_SUN_D14, BORDER_SPACE_A24, GEORGIA_C05];
+			_sectors[GEORGIA_C05] = [GEORGIA_BOROS, GEORGIA_C04, BORDER_SPACE_A24, MURPHY_APHRODITE, BORDER_SPACE_B25, GEORGIA_C06];
+			_sectors[GEORGIA_C06] = [GEORGIA_BOROS, GEORGIA_C05, BORDER_SPACE_A24, RIM_A27, GEORGIA_THREE_HILLS, GEORGIA_KERRY];
+			_sectors[GEORGIA_EZRA] = [GEORGIA_REGINA, GEORGIA_PRIAM_ITHACA, GEORGIA_B02, GEORGIA_BOROS];
+			_sectors[GEORGIA_KERRY] = [GEORGIA_THREE_HILLS, GEORGIA_REGINA, GEORGIA_PRIAM_ITHACA, GEORGIA_C06, GEORGIA_BOROS];
+			_sectors[GEORGIA_NEWHOPE] = [GEORGIA_C01, BORDER_SPACE_A28, WHITE_SUN_D15, GEORGIA_ATHENS, GEORGIA_B02, GEORGIA_PRIAM_ITHACA];
+			_sectors[GEORGIA_PRIAM_ITHACA] = [GEORGIA_C01, GEORGIA_NEWHOPE, GEORGIA_B02, GEORGIA_EZRA, GEORGIA_REGINA, GEORGIA_KERRY];
+			_sectors[GEORGIA_REGINA] = [GEORGIA_PRIAM_ITHACA, GEORGIA_EZRA, GEORGIA_BOROS, GEORGIA_KERRY];
+			_sectors[GEORGIA_THREE_HILLS] = [RIM_A28, GEORGIA_KERRY, GEORGIA_C06, RIM_A27];
+		
+			_sectors[HEINLEIN_SILVERHOLD] = [BORDER_SPACE_A14, BORDER_SPACE_A13, HEINLEIN_TRIUMPH];
+			_sectors[HEINLEIN_TRIUMPH] = [BORDER_SPACE_A13, RED_SUN_C06, HEINLEIN_SILVERHOLD];
+		
+			_sectors[HIMINBJORG_AESIR] = [BORDER_SPACE_A07, BORDER_SPACE_B07, HIMINBJORG_BRISINGAMEN, RED_SUN_C01, BORDER_SPACE_A09, BORDER_SPACE_A08];
+			_sectors[HIMINBJORG_BRISINGAMEN] = [BORDER_SPACE_B08, BORDER_SPACE_B09, RED_SUN_C01, HIMINBJORG_AESIR];
+		
+			_sectors[MURPHY_APHRODITE] = [GEORGIA_C05, BORDER_SPACE_A24, MURPHY_HERA, MURPHY_SHADOW, BORDER_SPACE_B25];
+			_sectors[MURPHY_HERA] = [MURPHY_APHRODITE, BORDER_SPACE_A24, BORDER_SPACE_A23, BORDER_SPACE_B23, MURPHY_SHADOW];
+			_sectors[MURPHY_SHADOW] = [BORDER_SPACE_B25, MURPHY_APHRODITE, MURPHY_HERA, BORDER_SPACE_B23, BORDER_SPACE_B24];
+		
+			_sectors[QIN_SHI_HUANG_SANTO] = [WHITE_SUN_C06, WHITE_SUN_D10, WHITE_SUN_D11];
+
+			_sectors[RED_SUN_ANSONSWORLD] = [BORDER_SPACE_B11, RED_SUN_HARVEST, RED_SUN_C03, RED_SUN_C05, RED_SUN_STALBANS];
+			_sectors[RED_SUN_B01] = [RED_SUN_C01, RED_SUN_JUBILEE, RED_SUN_HARVEST, RED_SUN_NEW_MELBOURNE, RED_SUN_JIANGYIN, RED_SUN_GREENLEAF, RED_SUN_SPACE_BAZAAR];
+			_sectors[RED_SUN_HARVEST] = [RED_SUN_B01, RED_SUN_JUBILEE, RED_SUN_C03, RED_SUN_ANSONSWORLD, RED_SUN_STALBANS, RED_SUN_NEW_MELBOURNE];
+			_sectors[RED_SUN_C01] = [BORDER_SPACE_A09, BORDER_SPACE_B09, HIMINBJORG_AESIR, HIMINBJORG_BRISINGAMEN, RED_SUN_JUBILEE, RED_SUN_B01, RED_SUN_SPACE_BAZAAR];
+			_sectors[RED_SUN_JUBILEE] = [BORDER_SPACE_B09, RED_SUN_HARVEST, RED_SUN_B01, RED_SUN_C01, RED_SUN_C03];
+			_sectors[RED_SUN_C03] = [RED_SUN_JUBILEE, RED_SUN_ANSONSWORLD, RED_SUN_HARVEST];
+			_sectors[RED_SUN_C05] = [RED_SUN_ANSONSWORLD, RED_SUN_C06, RED_SUN_STALBANS];
+			_sectors[RED_SUN_C06] = [RED_SUN_C07, RED_SUN_GREENLEAF, RED_SUN_STALBANS, RED_SUN_C05, HEINLEIN_TRIUMPH, BORDER_SPACE_A13];
+			_sectors[RED_SUN_C07] = [RED_SUN_SPACE_BAZAAR, RED_SUN_GREENLEAF, RED_SUN_C06, BORDER_SPACE_A13, WHITE_SUN_D07, WHITE_SUN_D06];
+			_sectors[RED_SUN_GREENLEAF] = [RED_SUN_SPACE_BAZAAR, RED_SUN_B01, RED_SUN_JIANGYIN, RED_SUN_STALBANS, RED_SUN_C06, RED_SUN_C07];
+			_sectors[RED_SUN_JIANGYIN] = [RED_SUN_B01, RED_SUN_NEW_MELBOURNE, RED_SUN_STALBANS, RED_SUN_GREENLEAF];
+			_sectors[RED_SUN_NEW_MELBOURNE] = [RED_SUN_B01, RED_SUN_HARVEST, RED_SUN_STALBANS, RED_SUN_JIANGYIN];
+			_sectors[RED_SUN_SPACE_BAZAAR] = [BORDER_SPACE_A09, RED_SUN_C01, RED_SUN_B01, RED_SUN_GREENLEAF, RED_SUN_C07, WHITE_SUN_D05, WHITE_SUN_D06];
+			_sectors[RED_SUN_STALBANS] = [RED_SUN_JIANGYIN, RED_SUN_NEW_MELBOURNE, RED_SUN_HARVEST, RED_SUN_ANSONSWORLD, RED_SUN_C05, RED_SUN_C06, RED_SUN_GREENLEAF];
+		
+			_sectors[LONDINIUM] = [WHITE_SUN_BERNADETTE, WHITE_SUN_SIHNON, WHITE_SUN_LIANNJIUN, WHITE_SUN_B04];
+			_sectors[WHITE_SUN_ALBION] = [WHITE_SUN_D13, WHITE_SUN_OSIRIS, WHITE_SUN_C06, WHITE_SUN_D11, BORDER_SPACE_A21, BORDER_SPACE_A22, BORDER_SPACE_A23]; 
+			_sectors[WHITE_SUN_ARIEL] = [BORDER_SPACE_A28, BORDER_SPACE_A29, WHITE_SUN_D01, WHITE_SUN_BELLEROPHON, WHITE_SUN_C08, WHITE_SUN_D15];
+			_sectors[WHITE_SUN_B01] = [WHITE_SUN_BELLEROPHON, WHITE_SUN_C02, WHITE_SUN_SIHNON, WHITE_SUN_BERNADETTE, WHITE_SUN_B04, WHITE_SUN_C08];
+			_sectors[WHITE_SUN_B04] = [WHITE_SUN_C08, WHITE_SUN_B01, WHITE_SUN_BERNADETTE, LONDINIUM, WHITE_SUN_LIANNJIUN, WHITE_SUN_C06, WHITE_SUN_OSIRIS];
+			_sectors[WHITE_SUN_BELLEROPHON] = [WHITE_SUN_D01, WHITE_SUN_D02, WHITE_SUN_C02, WHITE_SUN_B01, WHITE_SUN_C08, WHITE_SUN_ARIEL];
+			_sectors[WHITE_SUN_BERNADETTE] = [WHITE_SUN_B01, WHITE_SUN_SIHNON, LONDINIUM, WHITE_SUN_B04];
+			_sectors[WHITE_SUN_C02] = [WHITE_SUN_D02, WHITE_SUN_D04, LUX_PELORUM, WHITE_SUN_C04, WHITE_SUN_GONGHE, WHITE_SUN_SIHNON, WHITE_SUN_B01, WHITE_SUN_BELLEROPHON];
+			_sectors[WHITE_SUN_C04] = [WHITE_SUN_SIHNON, WHITE_SUN_GONGHE, WHITE_SUN_D06, WHITE_SUN_D07, WHITE_SUN_D08, WHITE_SUN_C05, WHITE_SUN_LIANNJIUN];
+			_sectors[WHITE_SUN_C05] = [WHITE_SUN_LIANNJIUN, WHITE_SUN_C04, WHITE_SUN_D08, WHITE_SUN_VALENTINE, WHITE_SUN_D10, WHITE_SUN_C06];
+			_sectors[WHITE_SUN_C06] = [WHITE_SUN_B04, WHITE_SUN_LIANNJIUN, WHITE_SUN_C05, WHITE_SUN_D10, QIN_SHI_HUANG_SANTO, WHITE_SUN_D11, WHITE_SUN_ALBION, WHITE_SUN_OSIRIS];
+			_sectors[WHITE_SUN_C08] = [WHITE_SUN_ARIEL, WHITE_SUN_BELLEROPHON, WHITE_SUN_B01, WHITE_SUN_B04, WHITE_SUN_OSIRIS, WHITE_SUN_D14, WHITE_SUN_D15];
+			_sectors[WHITE_SUN_D01] = [BORDER_SPACE_A29, BORDER_SPACE_A01, BORDER_SPACE_A02, WHITE_SUN_D02, WHITE_SUN_BELLEROPHON, WHITE_SUN_ARIEL];
+			_sectors[WHITE_SUN_D02] = [BORDER_SPACE_A02, BORDER_SPACE_A03, BORDER_SPACE_A04, LUX_PERSEPHONE, LUX_PELORUM, WHITE_SUN_C02, WHITE_SUN_BELLEROPHON, WHITE_SUN_D01];
+			_sectors[WHITE_SUN_D04] = [LUX_PELORUM, LUX_PERSEPHONE, BORDER_SPACE_A06, BORDER_SPACE_A07, BORDER_SPACE_A08, WHITE_SUN_D05, WHITE_SUN_GONGHE, WHITE_SUN_C02];
+			_sectors[WHITE_SUN_D05] = [WHITE_SUN_D04, BORDER_SPACE_A08, BORDER_SPACE_A09, RED_SUN_SPACE_BAZAAR, WHITE_SUN_D06, WHITE_SUN_GONGHE];
+			_sectors[WHITE_SUN_D06] = [WHITE_SUN_GONGHE, WHITE_SUN_D05, RED_SUN_SPACE_BAZAAR, RED_SUN_C07, WHITE_SUN_D07, WHITE_SUN_C04];
+			_sectors[WHITE_SUN_D07] = [WHITE_SUN_C04, WHITE_SUN_D06, RED_SUN_C07, BORDER_SPACE_A13, WHITE_SUN_D08];
+			_sectors[WHITE_SUN_D08] = [WHITE_SUN_C05, WHITE_SUN_C04, WHITE_SUN_D07, BORDER_SPACE_A13, BORDER_SPACE_A14, BORDER_SPACE_A15, WHITE_SUN_VALENTINE];
+			_sectors[WHITE_SUN_D10] = [QIN_SHI_HUANG_SANTO, WHITE_SUN_C06, WHITE_SUN_C05, WHITE_SUN_VALENTINE, BORDER_SPACE_A17, BORDER_SPACE_A18, BORDER_SPACE_A19, WHITE_SUN_D11];
+			_sectors[WHITE_SUN_D11] = [WHITE_SUN_ALBION, WHITE_SUN_C06, QIN_SHI_HUANG_SANTO, WHITE_SUN_D10, BORDER_SPACE_A19, BORDER_SPACE_A20, BORDER_SPACE_A21];
+			_sectors[WHITE_SUN_D13] = [WHITE_SUN_D14, WHITE_SUN_OSIRIS, WHITE_SUN_ALBION, BORDER_SPACE_A23, BORDER_SPACE_A24];
+			_sectors[WHITE_SUN_D14] = [WHITE_SUN_D15, WHITE_SUN_C08, WHITE_SUN_OSIRIS, WHITE_SUN_D13, GEORGIA_ATHENS, GEORGIA_C04, BORDER_SPACE_A24];
+			_sectors[WHITE_SUN_D15] = [WHITE_SUN_ARIEL, WHITE_SUN_C08, WHITE_SUN_D14, GEORGIA_ATHENS, GEORGIA_NEWHOPE, BORDER_SPACE_A28];
+			_sectors[WHITE_SUN_GONGHE] = [WHITE_SUN_C02, WHITE_SUN_D04, WHITE_SUN_D05, WHITE_SUN_D06, WHITE_SUN_C04, WHITE_SUN_SIHNON];
+			_sectors[WHITE_SUN_LIANNJIUN] = [LONDINIUM, WHITE_SUN_SIHNON, WHITE_SUN_C04, WHITE_SUN_C05, WHITE_SUN_C06, WHITE_SUN_B04];
+			_sectors[WHITE_SUN_OSIRIS] = [WHITE_SUN_C08, WHITE_SUN_B04, WHITE_SUN_C06, WHITE_SUN_ALBION, WHITE_SUN_D13, WHITE_SUN_D14];
+			_sectors[WHITE_SUN_SIHNON] = [WHITE_SUN_B01, WHITE_SUN_C02, WHITE_SUN_GONGHE, WHITE_SUN_C04, WHITE_SUN_LIANNJIUN, WHITE_SUN_BERNADETTE, LONDINIUM];
+			_sectors[WHITE_SUN_VALENTINE] = [WHITE_SUN_C05, WHITE_SUN_D08, WHITE_SUN_D10, BORDER_SPACE_A15, BORDER_SPACE_A16, BORDER_SPACE_A17];
+		
+		}
+				
+		public static function get Sectors():Dictionary
+		{
+			if(_sectors == null) InitializeSectors();
+			return _sectors;
+		}
+		
+		private static const QinShiHuangSectors:Array = [
+			QIN_SHI_HUANG_SANTO
+		];
+		
+		private static const EmptyRimSpaceSectors:Array = [
+			RIM_A21, RIM_A22, RIM_A23, RIM_A24,
+			RIM_A26, RIM_A27, RIM_A28, RIM_B24,
+			RIM_B25, RIM_CORETEX_RELAY_7			
+		];
+		
+		private static const MurphySectors:Array = [
+			MURPHY_APHRODITE, MURPHY_HERA, MURPHY_SHADOW			
+		];
+		
+		private static const GeorgiaSectors:Array = [
+			GEORGIA_ATHENS, GEORGIA_B02, GEORGIA_BOROS,	GEORGIA_C01,
+			GEORGIA_C04, GEORGIA_C05, GEORGIA_C06, GEORGIA_EZRA,
+			GEORGIA_KERRY, GEORGIA_NEWHOPE, GEORGIA_PRIAM_ITHACA, GEORGIA_REGINA,
+			GEORGIA_THREE_HILLS			
+		];
+		
+		private static const HeinleinSectors:Array = [
+			HEINLEIN_SILVERHOLD, HEINLEIN_TRIUMPH			
+		];
+		
+		private static const RedSunSectors:Array = [
+			RED_SUN_ANSONSWORLD, RED_SUN_B01, RED_SUN_C01, RED_SUN_JUBILEE,
+			RED_SUN_C03, RED_SUN_C05, RED_SUN_C06, RED_SUN_C07,
+			RED_SUN_GREENLEAF, RED_SUN_HARVEST, RED_SUN_JIANGYIN, RED_SUN_NEW_MELBOURNE,
+			RED_SUN_SPACE_BAZAAR, RED_SUN_STALBANS,
+		];
+		
+		private static const MotherlodeSectors:Array = [
+			RED_SUN_JIANGYIN, RED_SUN_NEW_MELBOURNE,
+		];
+		
+		public static const REAVER_SPACE:String = BORDER_SPACE_A06;
+		public static const REAVER_SPACE_0:String = BURNHAM_B01;
+		public static const REAVER_SPACE_1:String = BURNHAM_B02;
+		public static const REAVER_SPACE_2:String = BURNHAM_B03;
+		
+		private static const HiminbjorgSectors:Array = [
+			HIMINBJORG_AESIR, HIMINBJORG_BRISINGAMEN			
+		];
+		
+		private static const LuxSectors:Array = [
+			LUX_PELORUM, LUX_PERSEPHONE
+		];
+		
+		private static const BurnhamSectors:Array = [
+			BURNHAM_B01, BURNHAM_B02, BURNHAM_B03, BURNHAM_MIRANDA
+		];
+		
+		private static const WhiteSunSectors:Array = [
+			LONDINIUM, WHITE_SUN_ALBION, WHITE_SUN_ARIEL, WHITE_SUN_B01,
+			WHITE_SUN_B04, WHITE_SUN_BELLEROPHON, WHITE_SUN_BERNADETTE, WHITE_SUN_C02,
+			WHITE_SUN_C04, WHITE_SUN_C05, WHITE_SUN_C06, WHITE_SUN_C08,
+			WHITE_SUN_D01, WHITE_SUN_D02, WHITE_SUN_D04, WHITE_SUN_D05,
+			WHITE_SUN_D06, WHITE_SUN_D07, WHITE_SUN_D08, WHITE_SUN_D10,
+			WHITE_SUN_D11, WHITE_SUN_D13, WHITE_SUN_D14, WHITE_SUN_D15,
+			WHITE_SUN_GONGHE, WHITE_SUN_LIANNJIUN, WHITE_SUN_OSIRIS, WHITE_SUN_SIHNON,
+			WHITE_SUN_VALENTINE,
+			
+		];
+		private static const BlueSunSectors:Array = [
+			BLUE_SUN_C01, BLUE_SUN_DRAGONS_EGG, BLUE_SUN_C02, BLUE_SUN_DEADWOOD,
+			BLUE_SUN_FURY, BLUE_SUN_HIGHGATE, BLUE_SUN_MERIDIAN, BLUE_SUN_MUIR,
+			BLUE_SUN_NEW_CANAAN
+		];
+		
+		private static const UroborosBeltSectors:Array = [
+			BLUE_SUN_C01, BLUE_SUN_DRAGONS_EGG, BLUE_SUN_C02, BLUE_SUN_DEADWOOD,
+		];
+		
+		private static const EmptyBorderSpaceSectors:Array = [
+			BORDER_SPACE_A01, BORDER_SPACE_A02,	BORDER_SPACE_A03, BORDER_SPACE_A04,
+			BORDER_SPACE_A05, BORDER_SPACE_A06,	BORDER_SPACE_A07, BORDER_SPACE_A08,
+			BORDER_SPACE_A09, BORDER_SPACE_A13,	BORDER_SPACE_A14, BORDER_SPACE_A15,
+			BORDER_SPACE_A16, BORDER_SPACE_A17,	BORDER_SPACE_A18, BORDER_SPACE_A19,
+			BORDER_SPACE_A20, BORDER_SPACE_A21,	BORDER_SPACE_A22, BORDER_SPACE_A23,
+			BORDER_SPACE_A24, BORDER_SPACE_A28,	BORDER_SPACE_A29, BORDER_SPACE_B05,
+			BORDER_SPACE_B06, BORDER_SPACE_B07,	BORDER_SPACE_B08, BORDER_SPACE_B09,
+			BORDER_SPACE_B11, BORDER_SPACE_B20,	BORDER_SPACE_B21, BORDER_SPACE_B22,
+			BORDER_SPACE_B23, BORDER_SPACE_B24,	BORDER_SPACE_B25
+		];
+		
+		public static const SectorBorderSpace:Array = [
+			EmptyBorderSpaceSectors,
+			GeorgiaSectors,
+			HeinleinSectors,
+			HiminbjorgSectors,
+			MurphySectors,
+			RedSunSectors,
+		];
+		
+		public static const SectorRimSpace:Array = [
+			BlueSunSectors,
+			BurnhamSectors,
+			EmptyRimSpaceSectors,			
+		];
+		
+		public static const SectorAllianceSpace:Array = [
+			WhiteSunSectors,
+			LuxSectors,
+			QinShiHuangSectors,
+			];
+		
+		public static const SectorSuns:Array = [
+			WhiteSunSectors,
+			LuxSectors,
+			QinShiHuangSectors,
+
+			EmptyBorderSpaceSectors,
+			GeorgiaSectors,
+			HeinleinSectors,
+			HiminbjorgSectors,
+			MurphySectors,
+			RedSunSectors,
+			
+			EmptyRimSpaceSectors,
+			BlueSunSectors,
+			BurnhamSectors,
+		];
+		
+	}
+}
