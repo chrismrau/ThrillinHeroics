@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   width="800" height="600">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.binding.utils.BindingUtils;
+			import spark.components.Label;
+			import spark.components.RadioButton;
+			
+			import GameSetupManager;
+			import Ships.FireflyShip;
+			
+			[Bindable]
+			public var IPAddress:String = "127.0.0.1";
+			[Bindable]
+			public var IPPort:int = 1935; //6667, 19350-65535, AOE Ports: 47624, 2300-2400
+			[Bindable]
+			public var ConnectionName:String = "Firefly";
+			[Bindable]
+			public var SetupManager:GameSetupManager = new GameSetupManager();
+			
+			private function StartServer():void
+			{
+				SetupManager.StartServer(ConnectionName);
+			}
+			
+			private function SetupPlayersDisplay():void
+			{
+				for each(var actor:Player in SetupManager.SetupState.Players)
+				{
+					var tab:NavigatorContent = new NavigatorContent();
+					tab.label = actor.Name;
+					var view:VGroup = new VGroup();
+					
+					for each(var ship:FireflyShip in SetupManager.SetupState.Fleet)
+					{
+						var check:RadioButton = new RadioButton();
+						check.groupName = "Ships";
+						check.label = ship.Name;
+						view.addElement(check);
+					}
+					
+					var button:Button = new Button();
+					button.label = "Select";
+					button.addEventListener(MouseEvent.CLICK, SetupManager.SelectCurrentShip);
+					view.addElement(button);
+					
+					var state_text:Label = new Label();
+					state_text.id = "txtStateDisplay";
+					view.addElement(state_text);
+					BindingUtils.bindProperty(state_text, "text", actor, "StateText");
+					
+					tab.addElement(view);
+					TabsContainer.addChild(tab);
+				}
+				
+			}
+			
+			private function StartPlaying():void
+			{
+				SetupManager.StartPlaying();
+				SetupPlayersDisplay();
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:TabBar id="TabsContainer">
+		<mx:ArrayCollection>
+			<s:NavigatorContent label="Main">
+				<s:VGroup>
+					<s:HGroup>
+						<s:Label text="IP: "/>
+						<s:TextInput text="{IPAddress}"/>
+						<s:Label text="Port: "/>
+						<s:TextInput text="{IPPort}" restrict="0-9"/>
+					</s:HGroup>
+					<s:VGroup>
+						<s:CheckBox enabled="false" selected="true" label="Firefly the Board Game"/>
+						<s:CheckBox label="Breakin' Atmo" enabled="{SetupManager.IsNotStarted}" selected="@{SetupManager.IsBreakinAtmo}"/>
+						<s:CheckBox label="Pirates and Bounty Hunters" enabled="{SetupManager.IsNotStarted}" selected="@{SetupManager.IsPirates}"/>
+						<s:CheckBox label="Blue Sun" enabled="{SetupManager.IsNotStarted}" selected="@{SetupManager.IsBlueSun}"/>
+					</s:VGroup>
+					<s:HGroup>
+						<s:Button label="Start Server" click="StartServer()" enabled="{SetupManager.IsNotStarted}"/>
+						<s:TextInput text="{ConnectionName}" />
+					</s:HGroup>
+					<s:HGroup>
+						<s:Button label="Ready..." click="StartPlaying()" enabled="{SetupManager.CanPlay}"/>
+					</s:HGroup>
+				</s:VGroup>
+			</s:NavigatorContent>
+			
+		</mx:ArrayCollection>
+		
+	</s:TabBar>
+	
+</s:WindowedApplication>
